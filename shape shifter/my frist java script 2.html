@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My first Java script</title>
+<style>
+.btns{
+	position:absolute;
+	width:170px;
+	height:20px;
+	line-height:20px;
+	font-family:"Comic Sans MS";
+	font-size:15px;
+	text-align:center;
+	background-color:darkmagenta;
+	left:45%;
+	top:45%	;
+	text-wrap:none;
+	-webkit-transition:all 600ms;
+	border:10px solid;
+	border-color:transparent;
+}
+</style>
+</head>
+
+<body style="background-color:#090911">
+<div class="btns">Click me if you can!</div>
+
+	<script type="text/javascript">
+		function rnd(a,b){
+			return Math.floor(Math.random()*(b-a+1))+a;
+		}
+		function randColor(){
+			var c='#';
+			for(var i=0;i<6;i++){
+				c+=rnd(0,15).toString(16);
+			}
+			return c;
+		}
+		window.onload=function () {
+		var stg = document.getElementsByClassName('btns');
+		for(i=0;i<stg.length;i++){
+				stg.item(i).style.left=rnd(10,85)+'%';
+				stg.item(i).style.top=rnd(10,85)+'%';
+				stg.item(i).style.backgroundColor = randColor();
+							
+			stg.item(i).onmouseover = function (){
+				this.style.top = rnd(10,85)+'%';
+				this.style.left = rnd(10,85)+'%';				
+				this.style.backgroundColor = randColor();	
+			}
+		}
+	}
+	</script>
+</body>
+</html>

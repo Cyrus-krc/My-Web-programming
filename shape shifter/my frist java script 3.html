@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My first Java script</title>
+<style>
+body{
+	cursor:pointer;	
+}
+.btns{
+	position:absolute;
+	line-height:20px;
+	font-family:"Comic Sans MS";
+	font-size:15px;
+	text-align:center;
+	background-color:darkmagenta;
+	left:45%;
+	top:40%	;
+	text-wrap:none;
+	-webkit-transition:all 400ms;
+	border:10px solid;
+	border-color:transparent;
+}
+</style>
+</head>
+
+<body style="background-color:#090911">
+
+	<script type="text/javascript">
+		function wh(a,b){
+			return Math.round(Math.random()*35);	
+		}
+		function rnd(a,b){
+			return Math.floor(Math.random()*(b-a+1))+a;
+		}
+		function rds(a,b){
+			return Math.round(Math.random()*100);	
+		}
+		function randColor(){
+			var c='#';
+			for(var i=0;i<6;i++){
+				c+=rnd(0,15).toString(16);
+			}
+			return c;
+		}
+		for(var k=0;k<=200;k++){
+				document.write('<div class="btns"></div>');
+		}
+		for(var n=0;n<=1570;n++){
+				document.write(' troll ');	
+		}
+		window.onload=function () {
+		var stg = document.getElementsByClassName('btns');
+		for(i=0;i<stg.length;i++){
+				stg.item(i).style.left=rnd(5,95)+'%';
+				stg.item(i).style.top=rnd(5,90)+'%';
+				stg.item(i).style.backgroundColor = randColor();
+				stg.item(i).style.width=wh(60,180)+'px';
+				stg.item(i).style.height=wh(55,150)+'px';
+				stg.item(i).style.borderRadius=rds(10,50)+'%';
+							
+			stg.item(i).onmouseover = function (){
+				this.style.top = rnd(5,90)+'%';
+				this.style.left = rnd(5,95)+'%';				
+				this.style.backgroundColor = randColor();	
+				this.style.width=wh(60,180)+'px';
+				this.style.height=wh(55,150)+'px';
+				this.style.borderRadius=rds(10,50)+'%';
+			}
+		}
+	}
+	</script>
+</body>
+</html>

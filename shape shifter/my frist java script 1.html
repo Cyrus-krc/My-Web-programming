@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My first Java script</title>
+<style>
+.btns{
+	position:absolute;
+	width:170px;
+	height:20px;
+	line-height:20px;
+	font-family:"Comic Sans MS";
+	font-size:15px;
+	text-align:center;
+	background-color:darkmagenta;
+	left:45%;
+	top:45%	;
+	text-wrap:none;
+	-webkit-transition:all 600ms;
+	border:10px solid;
+	border-color:transparent;
+}
+</style>
+</head>
+
+<body style="background-color:#090911">
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+<div class="btns">Click me if you can :tr</div>
+
+	<script type="text/javascript">
+		function rnd(max){
+			return Math.round(Math.random()*max);
+		}
+		var stg = document.getElementsByClassName('btns');
+		for(i=0;i<stg.length;i++){
+			stg.item(i).onmouseover = function(){
+				this.style.left=rnd(85)+'%';
+				this.style.top=rnd(85)+'%';
+			}
+		}
+		
+	</script>
+</body>
+</html>

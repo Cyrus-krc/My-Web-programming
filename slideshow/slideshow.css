@@ -1,0 +1,106 @@
+div.container{
+	width:100%;
+	min-height:800px;
+	left:0;
+	right:0;
+	top:0;
+	background-image:url('images/bg-body.jpg');
+	background-size:cover;
+	position:fixed;
+}
+div.slideshow{
+	border-radius       : 4px;
+	width      : 950px;
+	height     : 600px;
+	margin     : 30px auto 0;
+	overflow   : hidden;
+	position   : relative;
+	background-color:#111;
+}
+div.slideshow div.train{
+	width    : 10000px;
+	height   : 600px;
+	position : absolute;
+	left     : 0;
+	top      : 0;
+	-webkit-transition : left 1100ms ease-in-out;
+}
+div.slideshow div.train > div{
+	width  : 950px;
+	height : inherit;
+	float  : left;
+	border-radius       : 4px;
+	background-size     : cover;
+	background-repeat   : no-repeat;
+	background-position : left top;
+}
+
+/*****************************************/
+div.slideshow ul.btns{
+	width:102px;
+	height:43px;
+	list-style : none;
+	position   : absolute;
+	margin-left:424px;
+	opacity:0.6;
+	-webkit-transition : opacity 300ms;	
+	background-image:url('images/control-nav.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	bottom:0;
+}
+div.slideshow ul.btns li{
+	float  : left;
+	width  : 12px;
+	height : 12px;
+	cursor : pointer;
+	margin-top:14px;
+	-webkit-transition : all 200ms;
+	background-image:url('images/bullets.png');
+	background-repeat:no-repeat;
+	z-index:2;
+}
+
+div.slideshow ul.btns li:hover,
+div.slideshow ul.btns li.active{
+	background-position:0 -11px;
+	-webkit-transition-duration : 200ms;
+	background-repeat:no-repeat;
+}
+div.slideshow div.previous,div.slideshow div.next{
+	position : absolute;
+	width    : 32px;
+	height   : 32px;
+	opacity  : 0;
+	cursor   : pointer;
+	background-image   : url('images/arrows.png');
+	background-repeat  : no-repeat;
+	-webkit-transition : opacity 500ms;
+	background-position:center;
+	z-index:3;
+	bottom:22px;
+}
+div.slideshow:hover div.previous,
+div.slideshow:hover div.next,div.slideshow:hover ul.btns{
+	opacity : 1;
+	-webkit-transition : opacity 700ms;	
+}
+
+div.slideshow div.previous{
+	background-position : 10% 10%;
+	left :412px;
+	-webkit-transition :all 500ms;
+}
+div.slideshow div.next{
+	right:372px;
+	background-position:90%  10%;
+	-webkit-transition :all 500ms;
+}
+div.slideshow div.previous:hover{
+	-webkit-transition :all 350ms;
+	background-position : 10% 87%;
+}
+div.slideshow div.next:hover{
+	-webkit-transition :all 350ms;
+	background-position : 90% 87%;	
+}

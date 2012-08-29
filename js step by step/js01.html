@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>01</title>
+<style type="text/css">
+body{
+	background-color:#333;	
+}
+#btn{
+	width:150px;
+	height:150px;
+	border-radius:75px;
+	left:45%;
+	top:45%;
+	background-color:#23deef;
+	position:absolute;
+	color:white;	
+	-webkit-transition: all 500ms;
+}
+p{
+	text-align:center;	
+	line-height:100px;
+	font-size:20px;
+	font-family:"Comic Sans MS", cursive;
+}
+</style>
+</head>
+<body>
+<div id="btn"><p>click me</p></div>
+<script type="text/javascript">
+	function rnd(max){
+	return Math.round(Math.random()*max);	
+}
+	var btn=document.getElementById("btn");
+   btn.onmouseover=function(){
+		btn.style.left=20+'%';
+		btn.style.top=rnd(90)+'%';
+		btn.style.rotate='180deg';
+}
+</script>
+</body>
+</html>

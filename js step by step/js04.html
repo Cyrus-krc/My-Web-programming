@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js04</title>
+<style type="text/css">
+body{
+	background-color:#0056fe;	
+}
+.box{
+	width:250px;
+	height:250px;
+	display:block;
+	background-color:#feab00;
+	margin:120px 40px 0;
+	float:left;
+	border-radius:20px;
+	color:#ffffaa;
+	font-size:32px;
+	font-family:"Comic Sans MS", cursive;
+	text-align:center;
+	line-height:180px;
+}
+</style>
+</head>
+
+<body>
+<div class="box"><p>click me</p></div>
+<div class="box"><p>click me</p></div>
+<div class="box"><p>click me</p></div>
+<div class="box"><p>click me</p></div>
+
+<script type="text/javascript">
+window.onload=function(){
+	var square = document.getElementsByClassName('box');
+		for(var i=0;i<square.length;i++){
+		(function(j){
+	var paragraph=document.getElementsByClassName('box').item(j).getElementsByTagName('p').item(0);
+				paragraph.onclick=function(){
+					alert(j+1);
+				}
+			})(i);	
+		}
+}
+
+</script>
+</body>
+</html>

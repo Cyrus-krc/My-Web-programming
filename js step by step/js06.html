@@ -34,20 +34,22 @@ body{
 window.onload=function(){
 	var square = document.getElementsByClassName('box');
 	
-		 nextbox=function(n){
-			square.style.opacity=n/10;
-		}
+	nextbox=function(n){
+		square.item(n).style.opacity=n/10;
+		nextbox(n+1);
+	}
 		for(var i=0;i<square.length;i++){
 		(function(j){
 	var paragraph=document.getElementsByClassName('box').item(j).getElementsByTagName('p').item(0);
 				paragraph.onclick=function(){
-					square.style.opacity=j/10;
+					square.item(j).style.backgroundColor='red';
+					square.item(j).style.opacity=j/10;
 					alert(j);
 					nextbox(j);
 				}
 			})(i);	
 		}
-		setInterval(square,2000);
+		setInterval(nextbox,3000);
 }
 
 </script>

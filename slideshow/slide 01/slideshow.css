@@ -1,0 +1,89 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/* SlideShow
+-------------------------------------------------- */
+body{
+	background-image:url('images/bg-body.jpg');	
+}
+div.container{
+	width       : 100%px;
+	margin      : 0 auto;
+	padding-top : 1px;
+}
+
+div.slideshow{
+	height     : 560px;
+	margin     : 40px auto 0;
+	overflow   : hidden;
+	position   : relative;
+	background-repeat   : no-repeat;
+}
+
+div.slideshow div.train{
+	width    : 30000px;
+	height   : 555px;
+	position : absolute;
+	left     : 0;
+	top      : 0;
+	-webkit-transition : left 800ms ease-in-out;
+}
+
+div.slideshow div.train > div{
+	width  : 1366px;
+	height : inherit;
+	float  : left;
+	border-radius       : 4px;
+	background-size        :cover;
+	background-repeat   : no-repeat;
+}
+div.slideshow div.train div:nth-child(1){
+	background-position:right center;	
+}
+div.slideshow div.train div:nth-child(2){
+	background-position:right center;
+}
+div.slideshow div.train div:nth-child(3){
+	background-position:0% 15%; 
+}
+div.slideshow div.train div:nth-child(4){
+	background-position:center center;	
+}
+div.slideshow div.train div:nth-child(5){
+	background-position:0% 0%;	
+}
+div.slideshow div.train div:nth-child(6){
+	background-position:60% 60%;
+}
+
+/* Navigation
+-------------------------------------------------- */
+
+div.slideshow ul.btns{
+	height     : 13px;
+	list-style : none;
+	position   : absolute;
+	left       : 0;
+	bottom     : 0;
+}
+
+div.slideshow ul.btns li{
+	float  : left;
+	width  : 30px;
+	height : 10px;
+	cursor : pointer;
+	margin-right       : 5px;
+	border-radius      : 2px;
+	background-color   : #333;
+	-webkit-transition : all 1100ms;
+}
+
+div.slideshow ul.btns li:hover,
+div.slideshow ul.btns li.active{
+	height           : 16px;
+	margin-top       : -3px;
+	background-color : #2677AD;
+	-webkit-transition-duration : 200ms;
+}

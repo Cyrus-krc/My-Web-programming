@@ -41,7 +41,7 @@ div.slideshow div.train > div{
 	background-repeat   : no-repeat;
 }
 div.slideshow div.train div:nth-child(1){
-	background-position:right center;	
+	background-position:30% 80%;	
 }
 div.slideshow div.train div:nth-child(2){
 	background-position:right center;
@@ -59,10 +59,10 @@ div.slideshow div.train div:nth-child(6){
 	background-position:60% 60%;
 }
 div.slideshow div.train div:nth-child(7){
-	background-position:center bottom;
+	background-position:0% 20%;
 }
 div.slideshow div.train div:nth-child(8){
-	background-position:center center;
+	background-position:100% 30%;
 }
 
 /* Navigation
@@ -77,19 +77,20 @@ div.slideshow ul.btns{
 }
 
 div.slideshow ul.btns li{
-	border:2px solid transparent;
+	border:2px solid white;
 	float  : left;
 	cursor : pointer;
 	width:120px;
 	height:90px;
 	margin-right       : 45px;
-	border-radius      : 5px;
+	border-radius      : 4px;
 	background-color   : #333;
 	-webkit-transition : all 1100ms;
 	-moz-transition : all 1100ms;
 	background-size:cover;
 	box-shadow:0 0 20px #111;
 	background-repeat:no-repeat;
+	opacity:.8;
 }
 div.slideshow ul.btns li:nth-child(1){
 	background-image:url(images/pic01.jpg);	
@@ -120,5 +121,6 @@ div.slideshow ul.btns li:hover,
 div.slideshow ul.btns li.active{
 	-webkit-transition-duration : 900ms;
 	-moz-transition-duration : 900ms;
-	border:2px solid #44e;
+	opacity:1;
+	border:2px solid #338;
 }

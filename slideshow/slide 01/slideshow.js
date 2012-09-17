@@ -6,9 +6,11 @@ window.onload=function(){
 	rnd=function(a,b){
 		return Math.floor(Math.random()*(b-a+1))+a;
 	}
+	
+	slideshow.style.width=pagewidth+'px';
+	
 	go2slide = function (n) {
 		if(n>lists.length-1) n=0;
-		slideshow.style.width=pagewidth+'px';
 		train.style.left=(-pagewidth*n)+'px';
 		lists.item(currentSlide).className = '';
 		lists.item(n).className = 'active';
@@ -16,8 +18,8 @@ window.onload=function(){
 	}
 	
 		nextSlide = function(){
-		go2slide(currentSlide+1);
-	}
+			go2slide(currentSlide+1);
+		}
 
 
 	var lists = slideshow.getElementsByClassName('btns').item(0).getElementsByTagName('li');

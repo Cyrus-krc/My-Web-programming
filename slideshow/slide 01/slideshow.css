@@ -22,9 +22,11 @@ div.slideshow{
 	background-repeat   : no-repeat;
 }
 div.slideshow div.cover{
-	background-image:url("images/slider_nav_bg.png");
+	background-image:url("images/pattern.png");
 	background-repeat:repeat;
-	display:block;
+	height:590px;
+	width:1366px;
+	position:absolute;
 }
 div.slideshow div.train{
 	width    : 30000px;
@@ -128,7 +130,31 @@ div.slideshow ul.btns li.active{
 	border:2px solid white;
 	box-shadow:0 0 50px #111;
 }
+/******** slide btns *********/
 div.slideshow div.previous,
 div.slideshow div.next{
-	
+	position : absolute;
+	width    : 70px;
+	height   : 590px;
+	background-image:url('images/slider_nav_bg.png');
+	opacity  : 0;
+	cursor   : pointer;
+	background-repeat  : no-repeat;
+	-webkit-transition : opacity 500ms;
+	-moz-transition : opacity 500ms;
+	background-color:#444;
+}
+
+div.slideshow:hover div.previous,
+div.slideshow:hover div.next{
+	opacity:.7;
+}
+
+div.slideshow div.previous{
+	left:0;
+	background-position:100% 50%;
+}
+div.slideshow div.next{
+	right:0;
+	background-position:0% 50%;
 }

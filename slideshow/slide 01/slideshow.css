@@ -77,7 +77,7 @@ div.slideshow ul.btns{
 }
 
 div.slideshow ul.btns li{
-	border:2px solid white;
+	border:2px solid transparent;
 	float  : left;
 	cursor : pointer;
 	width:120px;
@@ -122,5 +122,6 @@ div.slideshow ul.btns li.active{
 	-webkit-transition-duration : 900ms;
 	-moz-transition-duration : 900ms;
 	opacity:1;
-	border:2px solid #338;
+	border:2px solid white;
+	box-shadow:0 0 50px #111;
 }

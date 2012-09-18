@@ -24,6 +24,17 @@ window.onload=function(){
 			go2slide(currentSlide+1);
 		}
 
+	var autoPlayIv = false;
+	autoPlayStart = slideshow.onmouseout = function(){
+		if(autoPlayIv) return;
+		autoPlayIv = setInterval(nextSlide,2000);
+	}
+
+	autoPlayStop = slideshow.onmouseover = function(){
+		clearInterval(autoPlayIv);
+		autoPlayIv = false;
+	}
+
 	var lists = slideshow.getElementsByClassName('btns').item(0).getElementsByTagName('li');
 	for (var i=0; i<lists.length; i++) {
 		(function(j){
@@ -35,6 +46,5 @@ window.onload=function(){
 		})(i);
 	}
 	go2slide(0);
-	
-	setInterval(nextSlide,2000);
+	autoPlayStart();
 }

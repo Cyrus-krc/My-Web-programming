@@ -92,9 +92,9 @@ div.slideshow ul.btns li{
 	background-color   : #333;
 	-webkit-transition : all 1100ms;
 	-moz-transition : all 1100ms;
-	background-size:cover;
-	box-shadow:0 0 20px #111;
-	background-repeat:no-repeat;
+	background-size : cover;
+	box-shadow : 0 0 20px #111;
+	background-repeat : no-repeat;
 	opacity:.8;
 }
 div.slideshow ul.btns li:nth-child(1){
@@ -126,35 +126,61 @@ div.slideshow ul.btns li:hover,
 div.slideshow ul.btns li.active{
 	-webkit-transition-duration : 900ms;
 	-moz-transition-duration : 900ms;
-	opacity:1;
-	border:2px solid white;
-	box-shadow:0 0 50px #111;
+	opacity : 1;
+	border : 2px solid white;
+	box-shadow : 0 0 50px #111;
 }
 /******** slide btns *********/
 div.slideshow div.previous,
 div.slideshow div.next{
 	position : absolute;
-	width    : 70px;
+	width    : 60px;
 	height   : 590px;
-	background-image:url('images/slider_nav_bg.png');
 	opacity  : 0;
 	cursor   : pointer;
 	background-repeat  : no-repeat;
 	-webkit-transition : opacity 500ms;
 	-moz-transition : opacity 500ms;
-	background-color:#444;
+	background-color : #111;
 }
 
 div.slideshow:hover div.previous,
 div.slideshow:hover div.next{
-	opacity:.7;
+	opacity:.6;
 }
+div.slideshow div.next div.nxt,
+div.slideshow div.previous div.pvs{
+	background-image:url('images/slider_nav_bg.png');
+	width		:	25px;
+	height		:	31px;
+	position	:	absolute;
+	top			:	273px;	
+}
+
+/**** Previous Button ****/
 
 div.slideshow div.previous{
 	left:0;
-	background-position:100% 50%;
 }
+
+div.slideshow div.previous div.pvs{
+	left:15px;
+}
+
+div.slideshow:hover div.previous div.pvs:hover{
+	background-position:46px 0px;
+}
+/****** Next Button ******/
+
 div.slideshow div.next{
 	right:0;
-	background-position:0% 50%;
+}
+
+div.slideshow div.next div.nxt{
+	background-position:	-21px 0px;
+	right						:	15px;
+}
+
+div.slideshow:hover div.next div.nxt:hover{
+	background-position:24.5px 0px;	
 }

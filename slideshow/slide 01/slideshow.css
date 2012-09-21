@@ -6,7 +6,7 @@
 /* SlideShow
 -------------------------------------------------- */
 body{
-	background-image:url('images/bg-body.jpg');	
+	background-image:url('images/bg-body.png');	
 }
 div.container{
 	width       : 100%px;
@@ -24,9 +24,6 @@ div.slideshow{
 div.slideshow div.cover{
 	background-image:url("images/pattern.png");
 	background-repeat:repeat;
-	height:590px;
-	width:1366px;
-	position:absolute;
 }
 div.slideshow div.train{
 	width    : 30000px;

@@ -21,9 +21,15 @@ div.slideshow{
 	position   : relative;
 	background-repeat   : no-repeat;
 }
-div.slideshow div.cover{
+div.cover{
 	background-image:url("images/pattern.png");
 	background-repeat:repeat;
+	position: fixed;
+	z-index: 1;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
 }
 div.slideshow div.train{
 	width    : 30000px;
@@ -76,6 +82,7 @@ div.slideshow ul.btns{
 	position   : absolute;
 	left       : 0;
 	bottom     : 0;
+	z-index: 11;
 }
 
 div.slideshow ul.btns li{

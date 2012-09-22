@@ -30,6 +30,9 @@ div.cover{
 	left:0;
 	right:0;
 	bottom:0;
+	width:1366px;
+	height:590px;
+	margin-top:20px;
 }
 div.slideshow div.train{
 	width    : 30000px;

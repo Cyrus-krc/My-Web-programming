@@ -10,4 +10,4 @@
 * [JavaScript](http://ali.md/wiki/javascript)
 * [PHP](http://ali.md/php)
 
-###special tnx to @ali.md & @aligh and @mkdesign who always guid me and help me 
+###special tnx to [ali.md](https://github.com/ali.md) & [aligh](https://github.com/aligh) and [mkdesign](https://github.com/mkdesign)  who always guid me and help me 
